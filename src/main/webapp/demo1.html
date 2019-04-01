@@ -9,16 +9,28 @@
 		<div id="app">
 			{{message}}<!--Vue的插值表达式，把data中定义的数据显示到此处-->
 
+			<!-- 三元运算符 -->
+			{{ false ? "OK" : "No" }}
+
+			<!-- 数学运算-->
+			{{number*3.14}}
+
+			<!--插值表达式不支持
+			{{var a = 1;}}
+			{{if(a = 10){}}}
+			-->
+
 		</div>
 	</body>
-	<script type="text/javascript">
-
+	<script>
+		//view model
+		//创建Vue对象
 		new Vue({
-			el :"#app",
-			data : {
-			    message : 'Hello World vue!'
+			el:"#app",//由vue接管id为app区域
+			data:{
+			    message:"Hello Vue!  EESY",//注意：此处不要加分号
+				number:100
 			}
 		});
-
 	</script>
 </html>
